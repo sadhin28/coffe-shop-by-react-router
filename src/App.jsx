@@ -1,12 +1,14 @@
-
+import { Outlet } from "react-router-dom";
 import './App.css'
+import Nav from "./Components/Nav/Nav";
 
 function App() {
 
 
   return (
      <div>
-        <h1>hi</h1>
+         <Nav></Nav>
+         <Outlet />
      </div>
   )
 }
