@@ -4,9 +4,9 @@ import { NavLink } from "react-router-dom";
 
 const Nav = () => {
      const links =<>
-         <NavLink to="/" >Home</NavLink>
-         <NavLink >Listed Books</NavLink>
-         <NavLink >Pages to Read</NavLink>
+         <NavLink className='hover:text-blue-400 ' to="/" >Home</NavLink>
+         <NavLink className='hover:text-blue-400 '  to="coffes" >Coffes</NavLink>
+         <NavLink className='hover:text-blue-400 '  to="dashboard" >Dashboard</NavLink>
     </>
     return (
 
@@ -26,17 +26,14 @@ const Nav = () => {
                 </div>
                 <a className=" btn-ghost text-xl md:text-2xl font-bold">Book Vibe</a>
             </div>
-            <div className="navbar-center hidden lg:flex">
+            <div className="navbar-end hidden lg:flex ">
                 <ul className="menu text-xl menu-horizontal px-1 flex gap-5 items-center ">
                  {
                  links
                  }
                 </ul>
             </div>
-            <div className="navbar-end flex gap-3 ">
-            <Link  className="btn text-xl md:text-2xl  text-white bg-[#23BE0A]">Sign In</Link>
-            <Link className="btn text-xl md:text-2xl text-white bg-[#59C6D2]">Sign Up</Link>
-            </div>
+            
         </div>
     )
 };
