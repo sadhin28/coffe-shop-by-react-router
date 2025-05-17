@@ -11,7 +11,7 @@ const Home = () => {
             <Heading title={'Browse Coffees By Category'} subTitle={'Choose Your Coffee'} ></Heading>
             <div>
 
-                <div role="tablist" className="tabs  tabs-lift justify-between ">
+                <div role="tablist" className="tabs  tabs-lift justify-around ">
                     {
                         categorie.map(data=><Link key={data.category} to={`/card/${data.id}`} >{data.category}</Link>)
                     }
