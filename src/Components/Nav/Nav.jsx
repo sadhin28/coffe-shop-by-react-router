@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
+import ThemController from "../ThemController/ThemController";
 
 
 const Nav = () => {
@@ -33,6 +34,7 @@ const Nav = () => {
                  }
                 </ul>
             </div>
+            <ThemController></ThemController>
             
         </div>
     )
