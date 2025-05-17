@@ -1,9 +1,9 @@
 
 const Heading = ({title,subTitle}) => {
     return (
-        <div>
-            <h1>{title}</h1>
-            <p>{subTitle}</p>
+        <div className="mb-10 md:text-2xl  ">
+            <h1 className="text-center font-bold">{title}</h1>
+            <p className="text-center">{subTitle}</p>
         </div>
     );
 };
