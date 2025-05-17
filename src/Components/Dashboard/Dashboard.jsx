@@ -1,9 +1,12 @@
-import React from 'react';
+
+import Heading from '../Heading/Heading';
 
 const Dashboard = () => {
     return (
         <div>
-            <h1>DashBoard</h1>
+           <div className='mt-10'> <Heading
+             title={"Welcome to Dashboard"}
+             subTitle={"Manage Coffe that that you have prviously added as favorive,You can view or remove them from here"}></Heading></div>
         </div>
     );
 };

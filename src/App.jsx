@@ -10,7 +10,7 @@ function App() {
   return (
      <div className="w-11/12 mx-auto">
          <Nav></Nav>
-          <div className="min-h-[calc(100vh-300px)] container">
+          <div className="min-h-[calc(100vh-300px)] max-w-500 mx-auto">
             <Outlet />
           </div>
          <Footer></Footer>
