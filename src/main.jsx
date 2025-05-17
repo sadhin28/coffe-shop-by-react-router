@@ -11,6 +11,7 @@ import {
 import Home from './Components/Home/Home.jsx';
 import Coffes from './Components/Coffes/Coffes.jsx';
 import Dashboard from './Components/Dashboard/Dashboard.jsx';
+import CoffeeCard from './Components/CoffeCard/CoffeeCard.jsx';
 
 const router = createBrowserRouter([
   {
@@ -20,7 +21,15 @@ const router = createBrowserRouter([
       {
         path:"/",
         element:<Home></Home>,
-        loader:()=>fetch('categories.json')
+       children:[
+         {
+            path:'/card',
+            element:<CoffeeCard></CoffeeCard>
+          }
+       ],
+       
+        loader:()=>fetch('categories.json'),
+        
       },
       {
         path:"coffes",
@@ -30,6 +39,8 @@ const router = createBrowserRouter([
         path:"dashboard",
         element:<Dashboard></Dashboard>
       },
+        
+        
     ]
   },
 ]);
