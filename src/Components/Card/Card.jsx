@@ -6,17 +6,17 @@ const Card = ({ data}) => {
     const {image,name,ingredients,description}=data
     
     return (
-        <div>
-            <div className="card flex hover:translate-2.5 hover:transform-border bg-base-100 w-96 shadow-sm">
+        <div className='flex'>
+            <div className="card  hover:translate-2.5 hover:transform-border bg-base-100 w-96 shadow-sm">
                 <figure>
                     <img
-                        className=''
+                        className='h-70 w-full'
                         src={image}
                         alt="Shoes" />
                         
                 </figure>
-                <div className="card-body">
-                   <div className='flex items-start'>
+                <div className="card-body flex-col">
+                   <div className='flex flex-grow items-start'>
                        <h2 className="card-title">
                         {name}
                         <div className='flex flex-wrap gap-2'>
