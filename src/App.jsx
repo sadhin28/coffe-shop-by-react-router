@@ -3,6 +3,7 @@ import './App.css'
 import Nav from "./Components/Nav/Nav";
 import Footer from "./Components/Footer/Footer";
   import { ToastContainer } from 'react-toastify';
+import Footer2 from "./Components/Footer/Footer2";
 
 function App() {
 
@@ -13,7 +14,8 @@ function App() {
           <div className="min-h-[calc(100vh-300px)] max-w-500 mx-auto">
             <Outlet />
           </div>
-         <Footer></Footer>
+         {/* <Footer></Footer> */}
+         <Footer2></Footer2>
           <ToastContainer position="top-center"/>
      </div>
   )
