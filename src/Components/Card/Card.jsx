@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Card = ({ data}) => {
  
-    const {image,name,id,ingredients,description}=data
+    const {image,name,ingredients,description}=data
     
     return (
         <div>
@@ -28,7 +28,7 @@ const Card = ({ data}) => {
                    </div>
                     <p>{description}</p>
                     <div className="card-actions justify-end">
-                        <Link  className='badge badge-outline'>Add To Card</Link>
+                        <Link  className='badge btn badge-outline'>Add To Card</Link>
                       
                         
                     </div>
