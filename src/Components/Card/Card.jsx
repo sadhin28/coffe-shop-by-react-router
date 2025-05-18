@@ -25,13 +25,11 @@ const Card = ({ data}) => {
                         }
                         </div>
                     </h2>
-                    
+
                    </div>
                     <p>{description}</p>
                     <div className="card-actions justify-end">
                         <Link  className='badge btn badge-outline'>Add To Card</Link>
-                      
-                        
                     </div>
                 </div>
             </div>
