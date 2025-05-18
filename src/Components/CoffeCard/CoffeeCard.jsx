@@ -1,13 +1,21 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import Card from "../Card/Card";
 
 const CoffeeCard = () => {
+
     const coffeecard = useLoaderData();
+    
     console.log(coffeecard)
     const obj = useParams()
     console.log(obj)
+    const coffee=   coffeecard.filter(data=> data.category === obj.category);
+    console.log(coffee)
     return (
         <div>
-            <h1>Coffe Cards......{obj.category}</h1>
+            <h1 className="font-bold mb-10 text-2xl">{obj.category}</h1>
+            {
+              coffee.map(data=><Card data={data}></Card>)
+            }
         </div>
     );
 };
