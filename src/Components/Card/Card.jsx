@@ -1,10 +1,14 @@
 
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Card = ({ data}) => {
+    console.log(data)
     const {image,name,id,ingredients,description}=data
+    const [cardId,setCardId]=useState([])
+    console.log(cardId)
     const handelAddToCard=(id)=>{
-        console.log(typeof(id))
+       
         
     }
     return (
