@@ -1,9 +1,11 @@
-import React from 'react';
+
 import { Link } from 'react-router-dom';
 
-const Card = ({ data }) => {
+const Card = ({ data}) => {
     const {image,name,id,ingredients,description}=data
-   
+    const handelAddToCard=(id)=>{
+        alert(id)
+    }
     return (
         <div>
             <div className="card flex hover:translate-2.5 hover:transform-border bg-base-100 w-96 shadow-sm">
@@ -27,8 +29,8 @@ const Card = ({ data }) => {
                    </div>
                     <p>{description}</p>
                     <div className="card-actions justify-end">
-                        <Link to={id} className='badge badge-outline'>Add To Card</Link>
-                        <Link></Link>
+                        <Link onClick={()=>handelAddToCard(`${id}`)}  className='badge badge-outline'>Add To Card</Link>
+                      
                         
                     </div>
                 </div>
