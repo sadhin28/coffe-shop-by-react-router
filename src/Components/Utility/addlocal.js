@@ -1,5 +1,5 @@
 const getStoredReadList =()=>{
-    const storedListr=localStorage.getItem('read-list')
+    const storedListr=localStorage.getItem('coffee-list')
     if(storedListr){
         const storedList = JSON.parse(storedListr);
         return storedList;
@@ -10,16 +10,17 @@ const getStoredReadList =()=>{
 }   
 
 const addToStoredReadList=(id)=>{
+    console.log(id)
     const storedList = getStoredReadList();
     if(storedList.includes(id)){
 
-        alert(`This Book alrady exists in the read List`)
+        alert(`This Coffee alrady exists in the Dashboard`)
     }
     else{
         storedList.push(id);
         const storedListstr = JSON.stringify(storedList);
-        localStorage.setItem('read-list',storedListstr)
-        alert('Listed The Book')
+        localStorage.setItem('coffee-list',storedListstr)
+        alert('Listed The Coffee')
     }
 }
 export {addToStoredReadList,getStoredReadList}

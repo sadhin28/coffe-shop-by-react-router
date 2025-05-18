@@ -1,9 +1,10 @@
 
 import { Link } from 'react-router-dom';
+import { addToStoredReadList } from '../Utility/addlocal';
 
 const Card = ({ data}) => {
  
-    const {image,name,ingredients,description}=data
+    const {image,name,id,ingredients,description}=data
     
     return (
         <div className='flex'>
@@ -29,7 +30,7 @@ const Card = ({ data}) => {
                    </div>
                     <p>{description}</p>
                     <div className="card-actions justify-end">
-                        <Link  className='badge btn badge-outline'>Add To Card</Link>
+                        <Link onClick={()=>addToStoredReadList(id)}  className='badge btn badge-outline'>Add To Card</Link>
                     </div>
                 </div>
             </div>
