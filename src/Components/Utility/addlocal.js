@@ -1,3 +1,4 @@
+import {  toast } from 'react-toastify';
 const getStoredReadList =()=>{
     const storedListr=localStorage.getItem('coffee-list')
     if(storedListr){
@@ -14,13 +15,13 @@ const addToStoredReadList=(id)=>{
     const storedList = getStoredReadList();
     if(storedList.includes(id)){
 
-        alert(`This Coffee alrady exists in the Dashboard`)
+        toast.error(`This Coffee alrady exists in the Dashboard`)
     }
     else{
         storedList.push(id);
         const storedListstr = JSON.stringify(storedList);
         localStorage.setItem('coffee-list',storedListstr)
-        alert('Listed The Coffee')
+        toast.success('Add To card The Coffee')
     }
 }
 export {addToStoredReadList,getStoredReadList}

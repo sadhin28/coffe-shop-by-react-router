@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import './App.css'
 import Nav from "./Components/Nav/Nav";
 import Footer from "./Components/Footer/Footer";
-
+  import { ToastContainer } from 'react-toastify';
 
 function App() {
 
@@ -14,6 +14,7 @@ function App() {
             <Outlet />
           </div>
          <Footer></Footer>
+          <ToastContainer position="top-center"/>
      </div>
   )
 }
