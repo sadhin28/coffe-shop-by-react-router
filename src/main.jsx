@@ -13,11 +13,13 @@ import Coffes from './Components/Coffes/Coffes.jsx';
 import Dashboard from './Components/Dashboard/Dashboard.jsx';
 import CoffeeCard from './Components/CoffeCard/CoffeeCard.jsx';
 import IcedCoffee from './Components/IcedCoffee/IcedCoffee.jsx';
+import ErrorPage from './Components/ErrorPage/ErrorPage.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element:<App></App>,
+    errorElement:<ErrorPage></ErrorPage>,
     children:[
       {
         path:"/",
