@@ -30,7 +30,7 @@ const router = createBrowserRouter([
             path:`/coffee/:category`,
             element:<CoffeeCard></CoffeeCard>,
             loader:()=>fetch('../coffees.json')
-            
+
           }
 
         ]
@@ -42,7 +42,8 @@ const router = createBrowserRouter([
       },
       {
         path:"dashboard",
-        element:<Dashboard></Dashboard>
+        element:<Dashboard></Dashboard>,
+        loader:()=>fetch('../coffees.json')
       },
     ]
   },
