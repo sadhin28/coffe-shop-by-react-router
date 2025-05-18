@@ -25,6 +25,7 @@ const Card = ({ data}) => {
                         }
                         </div>
                     </h2>
+                    
                    </div>
                     <p>{description}</p>
                     <div className="card-actions justify-end">
