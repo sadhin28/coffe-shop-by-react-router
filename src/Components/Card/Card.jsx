@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 const Card = ({ data}) => {
     const {image,name,id,ingredients,description}=data
     const handelAddToCard=(id)=>{
-        alert(id)
+        console.log(typeof(id))
+        
     }
     return (
         <div>
