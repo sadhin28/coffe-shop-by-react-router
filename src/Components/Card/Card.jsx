@@ -1,16 +1,10 @@
 
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Card = ({ data}) => {
-    console.log(data)
+ 
     const {image,name,id,ingredients,description}=data
-    const [cardId,setCardId]=useState([])
-    console.log(cardId)
-    const handelAddToCard=(id)=>{
-       
-        
-    }
+    
     return (
         <div>
             <div className="card flex hover:translate-2.5 hover:transform-border bg-base-100 w-96 shadow-sm">
@@ -34,7 +28,7 @@ const Card = ({ data}) => {
                    </div>
                     <p>{description}</p>
                     <div className="card-actions justify-end">
-                        <Link onClick={()=>handelAddToCard(`${id}`)}  className='badge badge-outline'>Add To Card</Link>
+                        <Link  className='badge badge-outline'>Add To Card</Link>
                       
                         
                     </div>
