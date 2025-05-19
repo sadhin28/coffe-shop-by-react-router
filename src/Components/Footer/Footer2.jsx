@@ -2,8 +2,7 @@ import { FaFacebookSquare } from "react-icons/fa";
 import { IoLogoInstagram } from "react-icons/io";
 import { CgWebsite } from "react-icons/cg";
 import { FaGithub } from "react-icons/fa";
-
-
+import logo from '../../assets/WhatsApp Image 2025-05-19 at 04.07.44_a63162ba.jpg'
 const Footer2 = () => {
     const product = <>
         <li><a href="">Ullo Mart Mail</a></li>
@@ -27,13 +26,17 @@ const Footer2 = () => {
 
     </>
     return (
-        <footer className="bg-purple-50 p-5">
+        <footer className="p-5 border-t-1 bg-black">
             <div className="container grid gap-6 py-6 md:gap-12 md:py-12">
                 <div className="flex justify-items-center">
                     <div className='text-purple-800 gap-40 w-3/10'>
 
-                        <h1 className='text-5xl'>Logo</h1>
-                        <ul className="mt-5 flex text-4xl md:flex-wrap gap-10">
+                        
+                       <div className="mb-5 md:flex md:justify-center ">
+                          <img className="rounded-full flex md:h-20 md:w-20 relative left-30 md:left-0" src={logo} alt="" />
+                        
+                       </div>
+                        <ul className="text-4xl flex  gap-6 md:justify-center ">
                             <li><a target="-blank" href="https://www.facebook.com/profile.php?id=61575997992841"><FaFacebookSquare /></a></li>
                             <li><a target="-blank" href=""><IoLogoInstagram /></a></li>
                             <li><a target="-blank" href=""><FaGithub /></a></li>
@@ -58,7 +61,7 @@ const Footer2 = () => {
                             </ul>
                         </div>
                         <div className="text-purple-800 mt-5 md:h-full h-0 invisible md:visible ">
-                            <h1 className="font-black text-2xl">Product</h1>
+                            <h1 className="font-black text-2xl">Contact</h1>
                             <ul className="grid text-2xl">
                                 {Contact}
                             </ul>
