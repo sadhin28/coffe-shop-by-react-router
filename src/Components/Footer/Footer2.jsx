@@ -95,9 +95,9 @@ const Footer2 = () => {
                         </div>
                     </div>
 
-                      <div className="collapse collapse-plus md:hidden ">
+                      <div className="collapse  collapse-plus md:hidden ">
                         <input type="checkbox" />
-                        <div className="collapse-title  text-purple-600 text-2xl font-semibold">Product</div>
+                        <div className="collapse-title text-purple-600 text-2xl font-semibold">Product</div>
                         <div className="collapse-content text-sm">
                             <ul className="text-xl">
                                 {product}
