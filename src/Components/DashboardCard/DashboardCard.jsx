@@ -7,7 +7,7 @@ const DashboardCard = ({datas,DeleteCard}) => {
     return (
       <div className='flex'>
         <div className="text-5xl relative left-100 bottom-5 text-red-600 z-50">
-                    <MdDeleteForever onClick={()=>DeleteCard(`${id}`)} />
+                    <MdDeleteForever onClick={()=>DeleteCard(id)} />
             </div>
             <div className="card   hover:transform-border bg-base-100 w-96 shadow-sm">
                 

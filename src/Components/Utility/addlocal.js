@@ -25,13 +25,16 @@ const addToStoredReadList=(id)=>{
     }
 }
 
-
+const saveCartToLs = cart =>{
+    const cartStringyfy = JSON.stringify(cart);
+    localStorage.setItem('coffee-list',cartStringyfy)
+}
 
 const removeFromLs =id=>{
   const cart = getStoredReadList();
   //removing every id
   const remaining = cart.filter(idx => idx !== id);
-   (remaining);
+   saveCartToLs(remaining);
 }
 
 

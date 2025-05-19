@@ -9,7 +9,7 @@ import DashboardCard from '../DashboardCard/DashboardCard';
 const Dashboard = () => {
    const allcoffee = useLoaderData();
    const [addcoffee,setaddcoffee]=useState([])
-   const [cart,setCart]=useState([])
+   
    
    useEffect(()=>{
      const storedCoffee = getStoredReadList();
@@ -20,8 +20,8 @@ const Dashboard = () => {
 
    const DeleteCard=(id)=>{
        const removingCard = addcoffee.filter(coffeeCard=>coffeeCard.id !== id)
-       setCart(removingCard)
-       removeFromLs(id)
+       setaddcoffee(removingCard)
+       removeFromLs(id);
 
      }
     return (
@@ -32,7 +32,7 @@ const Dashboard = () => {
             </div>
             <div className='mt-10 mb-10 grid justify-items-center md:grid-cols-2 lg:grid-cols-3 gap-10'>
                 {
-                  addcoffee.map(datas=><DashboardCard cart={cart}  DeleteCard={DeleteCard} key={datas.id} datas={datas}></DashboardCard>)
+                  addcoffee.map(datas=><DashboardCard  DeleteCard={DeleteCard} key={datas.id} datas={datas}></DashboardCard>)
                 }
             </div>
         </div>
