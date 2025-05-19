@@ -12,20 +12,28 @@ const Footer2 = () => {
     </>
     const Company = <>
         <li><a href="">About</a></li>
-        <li><a href="">Features</a></li>
-        <li><a href="">Our Team</a></li>
+        <li><a href="">Team</a></li>
+        <li><a href="">Shop</a></li>
         <li><a href="">Contact Us</a></li>
-        <li><a href="">Home</a></li>
+    
+
+    </>
+    const Contact = <>
+        <li><a href="">Blog</a></li>
+        <li><a href="">Help and Support</a></li>
+        <li><a href="">Press and Media</a></li>
+        <li><a href="">Contact Us</a></li>
+    
 
     </>
     return (
         <footer className="bg-purple-50 p-5">
             <div className="container grid gap-6 py-6 md:gap-12 md:py-12">
-                <div className="">
-                    <div className='text-purple-800 gap-40 w-3/5'>
+                <div className="flex justify-items-center">
+                    <div className='text-purple-800 gap-40 w-3/10'>
 
-                        <h1 className=' text-4xl md:text-5xl  font-bold '>Ullo Mart</h1>
-                        <ul className="mt-5 flex text-4xl  md:text-5xl  flex-wrap gap-10">
+                        <h1 className='text-5xl'>Logo</h1>
+                        <ul className="mt-5 flex text-4xl    flex-wrap gap-10">
                             <li><a target="-blank" href="https://www.facebook.com/profile.php?id=61575997992841"><FaFacebookSquare /></a></li>
                             <li><a target="-blank" href=""><IoLogoInstagram /></a></li>
                             <li><a target="-blank" href=""><FaGithub /></a></li>
@@ -35,13 +43,29 @@ const Footer2 = () => {
 
                     </div>
                     
-                     <div className="text-purple-800 mt-5 ">
+                    <div className="grid grid-cols-3 justify-items-center w-7/10">
+                         <div className="text-purple-800 mt-5 invisible md:visible">
+                         <h1 className="font-black text-2xl">Company</h1>
+                          <ul className="grid text-2xl">
+                             {Company}
+                          </ul>
+                     </div>
+                   
+                     <div className="text-purple-800 mt-5 invisible md:visible ">
                          <h1 className="font-black text-2xl">Product</h1>
                           <ul className="grid text-2xl">
                              {product}
                           </ul>
                      </div>
-                    <div className="text-purple-800 mt-5 ">
+                     <div className="text-purple-800 mt-5 invisible md:visible ">
+                         <h1 className="font-black text-2xl">Product</h1>
+                          <ul className="grid text-2xl">
+                             {Contact}
+                          </ul>
+                     </div>
+                    </div>
+                </div>
+                 <div className="text-purple-800 mt-5 relative bottom-30 ">
                         <div className="collapse collapse-plus text-2xl md:hidden ">
                             <input type="radio" name="my-accordion-3" defaultChecked />
                             <div className="collapse-title font-semibold">Product</div>
@@ -63,7 +87,6 @@ const Footer2 = () => {
                         </div>
 
 
-                    </div>
                 </div>
             </div>
         </footer>
