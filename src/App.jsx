@@ -15,7 +15,9 @@ function App() {
             <Outlet />
           </div>
          {/* <Footer></Footer> */}
-         <Footer2></Footer2>
+          <div className="">
+              <Footer2></Footer2>
+          </div>
           <ToastContainer position="top-center"/>
      </div>
   )

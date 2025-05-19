@@ -33,7 +33,7 @@ const Footer2 = () => {
     </>
     return (
         <footer className="p-5  bg-purple-50  shadow-sm">
-            <div className="container grid gap-6 py-6 md:gap-12 md:py-12">
+            <div className="container mx-auto grid gap-6 py-6 md:gap-12 md:py-12">
                 <div className="flex justify-items-center">
                     <div className=' gap-40 w-3/10'>
 
