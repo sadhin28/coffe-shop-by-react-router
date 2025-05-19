@@ -1,13 +1,14 @@
 import { MdDeleteForever } from "react-icons/md";
 
-const DashboardCard = ({datas}) => {
+const DashboardCard = ({datas,DeleteCard}) => {
      
-     const {image,name,ingredients,description}=datas;
+     const {image,name,id,ingredients,description}=datas;
+     
     return (
       <div className='flex'>
-        <div className="text-5xl relative left-100 bottom-5 text-blue-600 z-50">
-                    <MdDeleteForever />
-                </div>
+        <div className="text-5xl relative left-100 bottom-5 text-red-600 z-50">
+                    <MdDeleteForever onClick={()=>DeleteCard(`${id}`)} />
+            </div>
             <div className="card   hover:transform-border bg-base-100 w-96 shadow-sm">
                 
                 <figure>

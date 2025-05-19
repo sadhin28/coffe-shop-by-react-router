@@ -18,6 +18,9 @@ const Dashboard = () => {
      setaddcoffee(coffeelist)
    },[])
 
+   const DeleteCard=(id)=>{
+       const removingCard =
+     }
     return (
         <div>
            <div className='mt-10'> <Heading
@@ -26,7 +29,7 @@ const Dashboard = () => {
             </div>
             <div className='mt-10 mb-10 grid justify-items-center md:grid-cols-2 lg:grid-cols-3 gap-10'>
                 {
-                  addcoffee.map(datas=><DashboardCard key={datas.id} datas={datas}></DashboardCard>)
+                  addcoffee.map(datas=><DashboardCard DeleteCard={DeleteCard} key={datas.id} datas={datas}></DashboardCard>)
                 }
             </div>
         </div>
