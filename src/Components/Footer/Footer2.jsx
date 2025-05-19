@@ -105,12 +105,6 @@ const Footer2 = () => {
                         </div>
                     </div>
                 </div>
-                
-                   
-                
-                
-                  
-                
                 <div className="flex-1 border-b  p-2"></div>
                 <div className="text-center ">
                     <aside>
