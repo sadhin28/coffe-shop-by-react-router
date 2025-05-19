@@ -24,4 +24,15 @@ const addToStoredReadList=(id)=>{
         toast.success('Add To card The Coffee')
     }
 }
-export {addToStoredReadList,getStoredReadList}
+
+
+
+const removeFromLs =id=>{
+  const cart = getStoredReadList();
+  //removing every id
+  const remaining = cart.filter(idx => idx !== id);
+   (remaining);
+}
+
+
+export {addToStoredReadList,getStoredReadList,removeFromLs}
