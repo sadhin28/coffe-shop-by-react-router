@@ -5,10 +5,10 @@ const DashboardCard = ({datas}) => {
      const {image,name,ingredients,description}=datas;
     return (
       <div className='flex'>
-        <div className="text-5xl relative">
+        <div className="text-5xl relative left-100 bottom-5 text-blue-600 z-50">
                     <MdDeleteForever />
                 </div>
-            <div className="card  hover:translate-2.5 hover:transform-border bg-base-100 w-96 shadow-sm">
+            <div className="card   hover:transform-border bg-base-100 w-96 shadow-sm">
                 
                 <figure>
                     <img

@@ -14,9 +14,9 @@ function App() {
           <div className="min-h-[calc(100vh-300px)] max-w-500 mx-auto">
             <Outlet />
           </div>
-         {/* <Footer></Footer> */}
+         <Footer></Footer>
           <div className="">
-              <Footer2></Footer2>
+              {/* <Footer2></Footer2> */}
           </div>
           <ToastContainer position="top-center"/>
      </div>
