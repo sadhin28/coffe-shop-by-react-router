@@ -4,7 +4,7 @@ const DataFaq = ({ faq }) => {
     return (
         <div>
             <details className="collapse collapse-arrow bg-base-100 border-base-300 border">
-                <summary className="collapse-title font-semibold">{question}</summary>
+                <summary className="collapse-title text-primary font-semibold">{question}</summary>
                 <div className="collapse-content text-sm">
                    {answer}
                 </div>
