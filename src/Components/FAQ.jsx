@@ -1,41 +1,22 @@
+import { useEffect, useState } from "react";
+import DataFaq from "./DataFaq";
 
 const FAQ = () => {
+    const [faq,setfaq]=useState([])
+    console.log(faq)
+    useEffect(()=>{
+        fetch('faq.json')
+        .then(res=>res.json())
+        .then(data=>setfaq(data))
+    },[])
     return (
         <div>
-            <MDBContainer className="mt-5" style={{ maxWidth: '1000px' }}>
-                <MDBAccordion alwaysOpen initialActive={1}>
-                    <MDBAccordionItem collapseId={1} headerTitle="Question #1">
-                        <strong>This is the first item's accordion body.</strong> It is shown
-                        by default, until the collapse plugin adds the appropriate classes
-                        that we use to style each element. These classes control the overall
-                        appearance, as well as the showing and hiding via CSS transitions. You
-                        can modify any of this with custom CSS or overriding our default
-                        variables. It's also worth noting that just about any HTML can go
-                        within the <code>.accordion-body</code>, though the transition does
-                        limit overflow.
-                    </MDBAccordionItem>
-                    <MDBAccordionItem collapseId={2} headerTitle="Question #2">
-                        <strong>This is the second item's accordion body.</strong> It is
-                        hidden by default, until the collapse plugin adds the appropriate
-                        classes that we use to style each element. These classes control the
-                        overall appearance, as well as the showing and hiding via CSS
-                        transitions. You can modify any of this with custom CSS or overriding
-                        our default variables. It's also worth noting that just about any HTML
-                        can go within the <code>.accordion-body</code>, though the transition
-                        does limit overflow.
-                    </MDBAccordionItem>
-                    <MDBAccordionItem collapseId={3} headerTitle="Question #3">
-                        <strong>This is the third item's accordion body.</strong> It is hidden
-                        by default, until the collapse plugin adds the appropriate classes
-                        that we use to style each element. These classes control the overall
-                        appearance, as well as the showing and hiding via CSS transitions. You
-                        can modify any of this with custom CSS or overriding our default
-                        variables. It's also worth noting that just about any HTML can go
-                        within the <code>.accordion-body</code>, though the transition does
-                        limit overflow.
-                    </MDBAccordionItem>
-                </MDBAccordion>
-            </MDBContainer>
+            <h1 className="text-center font-bold text-2xl ">FAQ </h1>
+            <div className="mt-5 grid gap-2">
+                {
+                    faq.map(faq=><DataFaq faq={faq}></DataFaq>)
+                }
+            </div>
         </div>
     );
 };

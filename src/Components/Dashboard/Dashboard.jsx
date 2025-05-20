@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { getStoredReadList, removeFromLs } from '../Utility/addlocal';
 import Card from '../Card/Card';
 import DashboardCard from '../DashboardCard/DashboardCard';
-
+import FAQ from '../FAQ';
 
 const Dashboard = () => {
    const allcoffee = useLoaderData();
@@ -29,6 +29,9 @@ const Dashboard = () => {
            <div className='mt-10'> <Heading
              title={"Welcome to Dashboard"}
              subTitle={"Manage Coffe that that you have prviously added as favorive,You can view or remove them from here"}></Heading>
+            </div>
+            <div>
+               <FAQ></FAQ>
             </div>
             <div className='mt-10 mb-10 grid justify-items-center md:grid-cols-2 lg:grid-cols-3 gap-10'>
                 {
